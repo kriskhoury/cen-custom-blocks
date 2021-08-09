@@ -1,0 +1,62 @@
+.blocks-call-to-action{
+  .card{
+    display: flex;
+    border-radius: 0px;
+    border: solid 4px #414141;
+    margin-bottom: 10px;
+    .card-image{
+      width: 154px;
+      height: 150px;
+      border-right: solid 4px #414141;
+      background:{
+        size: contain;
+        repeat: no-repeat;
+      }
+      @media (max-width: 599px) {
+        display: none;
+      }
+    }
+    .card-content{
+      flex: 1;
+      padding: 20px 15px;
+      @media (max-width: 599px) {
+        padding: 20px 15px 40px;
+      }
+      b{
+        color: #414141;
+        font-size: 20px;
+        line-height: 35px;
+      }
+      p{
+        color: #787878;
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+    .wp-block-buttons{
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      .wp-block-button{
+        margin-bottom: 0;
+      }
+    }
+  }
+  .acf-block-preview &{
+    .card{
+      padding: 0px;
+      margin: 0px !important;
+       .card-image{
+        width: 104px;
+        height: 100px;
+        border-right: solid 4px #414141;
+      }
+      .card-content{
+        padding: 5px;
+        p{
+          margin: 0px;
+        }
+      }
+    }
+  }
+}

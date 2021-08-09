@@ -1,0 +1,141 @@
+.blocks-three-column-news{
+  position: relative;
+  .slider-buttons{
+    position: absolute;
+    z-index: 10;
+    top: 40%;
+    left: 0px;
+    right: 0px;
+    bottom: 40%;
+    display: flex;
+    align-items: center;
+    @media (max-width: 599px) {
+      display: none;
+    }
+    .slider-buttons-left{
+      flex: 1;
+      text-align: left;
+      .slider-button-previous{
+        display: inline-block;
+        border: none;
+        width: 30px;
+        min-height: 60px;
+        fill: green;
+        background:{
+          color: transparent;
+          image: url("data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZm9jdXNhYmxlPSJmYWxzZSIgZGF0YS1wcmVmaXg9ImZhbCIgZGF0YS1pY29uPSJjaGV2cm9uLWxlZnQiIGNsYXNzPSJzdmctaW5saW5lLS1mYSBmYS1jaGV2cm9uLWxlZnQgZmEtdy04IiByb2xlPSJpbWciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI1NiA1MTIiPjxwYXRoIGZpbGw9IiM2NjY2NjYiIGQ9Ik0yMzguNDc1IDQ3NS41MzVsNy4wNzEtNy4wN2M0LjY4Ni00LjY4NiA0LjY4Ni0xMi4yODQgMC0xNi45NzFMNTAuMDUzIDI1NiAyNDUuNTQ2IDYwLjUwNmM0LjY4Ni00LjY4NiA0LjY4Ni0xMi4yODQgMC0xNi45NzFsLTcuMDcxLTcuMDdjLTQuNjg2LTQuNjg2LTEyLjI4NC00LjY4Ni0xNi45NyAwTDEwLjQ1NCAyNDcuNTE1Yy00LjY4NiA0LjY4Ni00LjY4NiAxMi4yODQgMCAxNi45NzFsMjExLjA1MSAyMTEuMDVjNC42ODYgNC42ODYgMTIuMjg0IDQuNjg2IDE2Ljk3LS4wMDF6Ij48L3BhdGg+PC9zdmc+");
+          size: cover;
+        }
+        &:hover{
+          opacity: 0.5;
+        }
+      }
+    }
+    .slider-buttons-right{
+      flex: 1;
+      text-align: right;
+      .slider-button-next{
+        display: inline-block;
+        border: none;
+        width: 30px;
+        min-height: 60px;
+        background:{
+          color: transparent;
+          image: url("data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZm9jdXNhYmxlPSJmYWxzZSIgZGF0YS1wcmVmaXg9ImZhbCIgZGF0YS1pY29uPSJjaGV2cm9uLXJpZ2h0IiBjbGFzcz0ic3ZnLWlubGluZS0tZmEgZmEtY2hldnJvbi1yaWdodCBmYS13LTgiIHJvbGU9ImltZyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMjU2IDUxMiI+PHBhdGggZmlsbD0iIzY2NjY2NiIgZD0iTTE3LjUyNSAzNi40NjVsLTcuMDcxIDcuMDdjLTQuNjg2IDQuNjg2LTQuNjg2IDEyLjI4NCAwIDE2Ljk3MUwyMDUuOTQ3IDI1NiAxMC40NTQgNDUxLjQ5NGMtNC42ODYgNC42ODYtNC42ODYgMTIuMjg0IDAgMTYuOTcxbDcuMDcxIDcuMDdjNC42ODYgNC42ODYgMTIuMjg0IDQuNjg2IDE2Ljk3IDBsMjExLjA1MS0yMTEuMDVjNC42ODYtNC42ODYgNC42ODYtMTIuMjg0IDAtMTYuOTcxTDM0LjQ5NSAzNi40NjVjLTQuNjg2LTQuNjg3LTEyLjI4NC00LjY4Ny0xNi45NyAweiI+PC9wYXRoPjwvc3ZnPg==");
+          size: cover;
+        }
+        &:hover{
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+  .slider-wrapper{
+    overflow-x: hidden;
+    width: calc(100% - 80px);
+    margin: auto;
+    @media (max-width: 599px) {
+      width: 90vw;
+      overflow: visible;
+    }
+    .columns{
+      transition: all 0.4s ease-in-out;
+      position: relative;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      @media (max-width: 599px) {
+        margin: 5px;
+      }
+      .column{
+        @media (max-width: 599px) {
+          &:not(:nth-child(-n+3)) {
+              display: none;   
+          }
+        }
+        .card{
+          height: 600px;
+          position: relative;
+          overflow: hidden;
+          background-color: #f0f0f0;
+          box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+          .card-image{
+            time{
+              position: absolute;
+              z-index: 10;
+              top: 10px;
+              left: 15px;
+              color: #fff;
+              font:{
+                size: 21px;
+                style: italic;
+              }
+            }
+            .image{
+              width: 100%;
+              height: 300px;
+              background:{
+                position: center;
+                size: cover;
+              }
+            }
+          }
+          .card-content{
+            h3{
+              font-size: 24px !important;
+              line-height: 32px;
+              color: #454545;
+              margin-bottom: 14px;
+            }
+            h6{
+              color: #454545;
+            }
+            padding: 20px;
+            height: calc(100% - 344px); //IMAGE HEIGHT AND BUTTON HEIGHT
+          }
+          .card-footer{
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            // justify-content: flex-end;
+            .wp-block-buttons{
+              .wp-block-button{
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+  .editor-styles-wrapper &{
+    .card{
+      padding: 0px;
+      .card-content{
+        h3{
+          margin: 0;
+        }
+      }
+    }
+  }
+}

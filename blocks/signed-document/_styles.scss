@@ -1,0 +1,59 @@
+.blocks-signed-document{
+  .signature{
+    font-size: 40px;
+    font-family: 'Yellowtail', cursive;
+    text-align: center;
+    border: 0;
+    border-bottom: solid 1px #ccc;
+    box-shadow: none !important;
+    max-width: 500px;
+    &:focus{
+      outline: none !important;
+    }
+  }
+  .signed-efc{
+    background: {
+      image: url('blocks/signed-document/loading.gif');
+      position: center;
+      repeat: no-repeat;
+    }
+    border: solid 1px #ccc;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+    height: 0;
+    position: relative;
+    .signed-efc-inner{
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+    // width: calc(1230px / 2);
+    // height: calc(1575px / 2);
+    margin: auto;
+    padding-top: calc(1575 / 1230 * 100%);
+    img{
+    }
+    // @media (max-width: 599px) {
+    //   width: calc(1230px / 2);
+    //   height: calc(1575px / 2);
+    // }
+  }
+}
+
+[data-title="Signed Document"]{
+  .editor-view{
+    border: solid 1px #ccc; 
+    display: flex;
+    flex-direction: row;
+    align-content: center; 
+    justify-content: center; 
+    padding: 30px 20px;
+    svg{
+      width: 30px;
+      height: 30px;
+      margin: 0 10px;
+      vertical-align: middle;
+    }
+  }
+}
